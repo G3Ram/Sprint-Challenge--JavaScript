@@ -23,7 +23,7 @@ const multiply = function(x, y){
   return x * y;
 }
 const greeting = function(x, y){
-  return x + y;
+  return "Hello " + x + " " + y +", nice to meet you!";
 }
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 consume(2,2,add); // 4
@@ -35,7 +35,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+console.log( "Because nestedFunction is a function within a function it is closed and then called upon whereas, my function has yet to have been closed or called upon. AHA MOMENT. I came up with that answer just by looking at the problem. External is on the global scope so it can be called upon at any time.");
 
 
 const external = "I'm outside the function";
