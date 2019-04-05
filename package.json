@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/lambda-andrew/Sprint-Challenge--JavaScript/issues"
   },
-  "homepage": "https://github.com/lambda-andrew/Sprint-Challenge--JavaScript#readme"
+  "homepage": "https://github.com/lambda-andrew/Sprint-Challenge--JavaScript#readme",
+  "devDependencies": {
+    "ava": "^1.4.1"
+  }
 }
