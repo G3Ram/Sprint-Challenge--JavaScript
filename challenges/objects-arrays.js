@@ -37,6 +37,9 @@ let velociraptor = {
   period: "Late Cretaceious"
 };
 
+console.log(
+  `---------------------- OBJECTS CHALLENGE -----------------------------`
+);
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
@@ -125,6 +128,9 @@ const graduates = [
   }
 ];
 
+console.log(
+  `---------------------- ARRAYS CHALLENGE -----------------------------`
+);
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
@@ -136,6 +142,9 @@ for (let i = 0; i < graduates.length; i++) {
 }
 // Sorting the universities array alphabetically
 universities.sort();
+console.log(
+  `All the universities in the graduates array, alphabetically sorted`
+);
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -149,6 +158,9 @@ for (let i = 0; i < graduates.length; i++) {
   // Concatenating the first name and email and adding it to contactInfo
   contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
 }
+console.log(
+  `List of contact infos containing the first name and email of each student`
+);
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name.
@@ -161,9 +173,13 @@ for (let i = 0; i < graduates.length; i++) {
     uni.push(graduates[i].university);
   }
 }
+console.log(`List of universities containing the word - "Uni"`);
 console.log(uni);
 
 // ==== ADVANCED Array Methods ====
+console.log(
+  `---------------------- ADVANCED ARRAY CHALLENGE -----------------------------`
+);
 
 // Given this zoo data from around the United States, follow the instructions below.
 // Use the specific array methods in the requests below to solve the problems.
@@ -246,6 +262,7 @@ zooAnimals.forEach(animal => {
     `Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}`
   );
 });
+console.log(`Using .foreach() to retrieve the animal name + scientific name`);
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -259,6 +276,7 @@ Create a new array named lowerCase and map over each name to convert them all to
 const lowerCase = zooAnimals.map(animal => {
   return animal.animal_name.toLowerCase();
 });
+console.log(`Using .map() to retrieve the animal names in lower case`);
 console.log(lowerCase);
 
 /* Request 3: .filter() 
@@ -272,6 +290,9 @@ ind out which animals have a population less than 5.
 const largerPopulation = zooAnimals.filter(animal => {
   return animal.population < 5;
 });
+console.log(
+  `Using .filter() to retrieve the animals who have population less than 5`
+);
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -285,7 +306,10 @@ Find the total population from all the zoos using the .reduce() method.
 const populationTotal = zooAnimals.reduce((totalPopulation, animal) => {
   return (totalPopulation += animal.population);
 }, 0);
-console.log(populationTotal);
+console.log(
+  `Using .reduce() to get the total population of all the animals in the zoo`
+);
+console.log(`The total number of animals in the zoo is ${populationTotal}`);
 
 /* 
 

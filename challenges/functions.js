@@ -16,11 +16,11 @@ function consume(param1, param2, cb) {
  * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
  */
 function add(num1, num2) {
-  console.log(num1 + num2);
+  console.log(`The sum of two numbers is ${num1 + num2}`);
 }
 
 function multiply(num1, num2) {
-  console.log(num1 * num2);
+  console.log(`The product of two numbers is ${num1 * num2}`);
 }
 
 function greeting(firstName, lastName) {
@@ -28,12 +28,17 @@ function greeting(firstName, lastName) {
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
+console.log(
+  `---------------------- FUNCTION - CALLBACK CHALLENGE -----------------------------`
+);
 consume(2, 2, add); // 4
 consume(10, 16, multiply); // 160
 consume("Mary", "Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // ==== Closures ====
-
+console.log(
+  `---------------------- FUNCTION - CLOSURE CHALLENGE -----------------------------`
+);
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: This is because of the lexical scope of nestedFunction(). Since nestedFunction() is within
@@ -51,3 +56,6 @@ function myFunction() {
   nestedFunction();
 }
 myFunction();
+console.log(`Question: Why nestedFunction() can access the variable 'internal'? Explanation: This is because of 
+the lexical scope of nestedFunction(). Since nestedFunction() is within
+myFunction(), all the variables available for myFunction() will also be visible in nestedFunction().`);

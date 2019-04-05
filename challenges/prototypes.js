@@ -41,6 +41,9 @@ CuboidMaker.prototype.surfaceArea = function() {
 */
 
 const cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
+console.log(
+  `---------------------- PROTOTYPE CHALLENGE -----------------------------`
+);
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(
   `PROTOTYPE CHALLENGE :: Volume of the Cuboid is ${cuboid.volume()}`

@@ -6,7 +6,16 @@
  * Params - dimensions - This is an object which has length, width and height
  * Methods - volume(), surfaceArea()
  */
-class CuboidMaker {
+
+/*
+ ************ NOTE TO THE REVIEWER *****************
+ *
+ * A different class name is used so that all the answers can be visible in index.html
+ * As the prototype.js also has the same class name it will throw an error while rendering the html.
+ */
+
+//class CuboidMaker {
+class ClassCuboidMaker {
   constructor(dimensions) {
     this.length = dimensions.length;
     this.width = dimensions.width;
@@ -27,11 +36,16 @@ class CuboidMaker {
     );
   }
 }
-const cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
-// Test your volume and surfaceArea methods by uncommenting the logs below:
-console.log(`CLASSES CHALLENGE :: Volume of the cuboid is ${cuboid.volume()}`); // 100
+const cuboidForClass = new ClassCuboidMaker({ length: 4, width: 5, height: 5 });
 console.log(
-  `CLASSES CHALLENGE :: Surface Area of the cuboid is ${cuboid.surfaceArea()}`
+  `---------------------- CLASSES CHALLENGE -----------------------------`
+);
+// Test your volume and surfaceArea methods by uncommenting the logs below:
+console.log(
+  `CLASSES CHALLENGE :: Volume of the cuboid is ${cuboidForClass.volume()}`
+); // 100
+console.log(
+  `CLASSES CHALLENGE :: Surface Area of the cuboid is ${cuboidForClass.surfaceArea()}`
 ); // 130
 
 // Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.
@@ -46,7 +60,7 @@ console.log(
  * Params - dimensions - This is an object which has length, width and height
  * Methods - surfaceArea()
  */
-class CubeMaker extends CuboidMaker {
+class CubeMaker extends ClassCuboidMaker {
   constructor(dimensions) {
     super(dimensions);
   }
