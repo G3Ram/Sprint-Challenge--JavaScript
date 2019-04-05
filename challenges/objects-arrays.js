@@ -55,16 +55,16 @@ const velociraptor = DinosaurFactory2('velociraptor', 'carnivorous', '15 kg', '1
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(trex.weight);
+console.log(trex.weight)
 
 // What was the diet of a velociraptor?
-console.log(velociraptor.diet);
+console.log(velociraptor.diet)
 
 // How long was a stegosaurus?
-console.log(stegosaurus.length);
+console.log(stegosaurus.length)
 
 // What time period did tyrannosaurus live in?
-console.log(trex.period);
+console.log(trex.period)
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
@@ -72,7 +72,7 @@ DinosaurConstructor.prototype.roar = function() {
   return "RAWERSRARARWERSARARARRRR!"
 }
 
-console.log(trex.roar());
+console.log(trex.roar())
 
 
 
@@ -98,7 +98,7 @@ function getGraduates() {
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 function request1(graduates) {
-  const universities = [];
+  const universities = []
   for (graduate of graduates) {
     universities.push(graduate.university)
   }
@@ -113,49 +113,58 @@ Name email@example.com
 
 Log the result of your new array. */
 function request2(graduates) {
-  const contactInfo = [];
+  const contactInfo = []
   for(graduate of graduates) {
     contactInfo.push(graduate.first_name + ' ' + graduate.email)
   }
   return contactInfo
 }
-console.log(request2(getGraduates()));
+console.log(request2(getGraduates()))
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 function request3(graduates) {
-  const uni = [];
+  const uni = []
   for (graduate of graduates) {
     graduate.university.match(/uni/i) && uni.push(graduate.university)
   }
   return uni
 }
-console.log(request3(getGraduates()));
+console.log(request3(getGraduates()))
 
 
 // ==== ADVANCED Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
-
-zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
-{"animal_name":"Screamer, southern","population":1,"scientific_name":"Chauna torquata","state":"Alabama"},
-{"animal_name":"White spoonbill","population":8,"scientific_name":"Platalea leucordia","state":"Georgia"},
-{"animal_name":"White-cheeked pintail","population":1,"scientific_name":"Anas bahamensis","state":"Oregon"},
-{"animal_name":"Black-backed jackal","population":2,"scientific_name":"Canis mesomelas","state":"Washington"},
-{"animal_name":"Brolga crane","population":9,"scientific_name":"Grus rubicundus","state":"New Mexico"},
-{"animal_name":"Common melba finch","population":5,"scientific_name":"Pytilia melba","state":"Pennsylvania"},
-{"animal_name":"Pampa gray fox","population":10,"scientific_name":"Pseudalopex gymnocercus","state":"Connecticut"},
-{"animal_name":"Hawk-eagle, crowned","population":10,"scientific_name":"Spizaetus coronatus","state":"Florida"},
-{"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
+function getZooAnimals() {
+  return [
+    {"animal_name":"Jackal, asiatic","population":5,"scientific_name":"Canis aureus","state":"Kentucky"},
+    {"animal_name":"Screamer, southern","population":1,"scientific_name":"Chauna torquata","state":"Alabama"},
+    {"animal_name":"White spoonbill","population":8,"scientific_name":"Platalea leucordia","state":"Georgia"},
+    {"animal_name":"White-cheeked pintail","population":1,"scientific_name":"Anas bahamensis","state":"Oregon"},
+    {"animal_name":"Black-backed jackal","population":2,"scientific_name":"Canis mesomelas","state":"Washington"},
+    {"animal_name":"Brolga crane","population":9,"scientific_name":"Grus rubicundus","state":"New Mexico"},
+    {"animal_name":"Common melba finch","population":5,"scientific_name":"Pytilia melba","state":"Pennsylvania"},
+    {"animal_name":"Pampa gray fox","population":10,"scientific_name":"Pseudalopex gymnocercus","state":"Connecticut"},
+    {"animal_name":"Hawk-eagle, crowned","population":10,"scientific_name":"Spizaetus coronatus","state":"Florida"},
+    {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}
+  ]
+}
 
 /* Request 1: .forEach()
 
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const animalNames = [];
-console.log(animalNames);
+function advancedRequest1(animals) {
+  const animalNames = []
+  animals.forEach(({animal_name: aName, scientific_name: sName}) => {
+    animalNames.push(`Name: ${aName}, Scientific: ${sName}`) 
+  })
+  return animalNames
+}
+console.log(advancedRequest1(getZooAnimals()))
 
 /* Request 2: .map()    
 
@@ -163,24 +172,24 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
-console.log(lowerCase); 
+const lowerCase = []
+console.log(lowerCase) 
 
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
-console.log(largerPopulation);
+const largerPopulation = []
+console.log(largerPopulation)
 
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
-console.log(populationTotal);
+const populationTotal = 0
+console.log(populationTotal)
 
 
 /* 
