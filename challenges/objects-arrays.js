@@ -181,8 +181,10 @@ console.log(advancedRequest2(getZooAnimals()))
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = []
-console.log(largerPopulation)
+function advancedRequest3(animals) {
+  return animals.filter(({population}) => population < 5)
+}
+console.log(advancedRequest3(getZooAnimals()))
 
 /* Request 4: .reduce() 
 
