@@ -61,3 +61,15 @@ function myFunction() {
   nestedFunction()
 }
 myFunction()
+
+
+/**
+ * Export functions
+ */
+
+module.exports = {
+  consume: consume,
+  add: add,
+  multiply: multiply,
+  greeting: greeting,
+}

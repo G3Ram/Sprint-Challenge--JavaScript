@@ -42,20 +42,20 @@ let velociraptor = {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(tyrannosaurus.weight)
+//console.log(tyrannosaurus.weight) //=> 7000kg
 
 // What was the diet of a velociraptor?
-console.log(velociraptor.diet)
+//console.log(velociraptor.diet) //=> carnivorous
 
 // How long was a stegosaurus?
-console.log(stegosaurus.length)
+//console.log(stegosaurus.length) //=> 9m
 
 // What time period did tyrannosaurus live in?
-console.log(tyrannosaurus.period)
+//console.log(tyrannosaurus.period) //=> Late Cretaceious
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(tyrannosaurus.roar())
+//console.log(tyrannosaurus.roar()) //=> RAWERSRARARWERSARARARRRR!
 
 
 // ==== Arrays ====
@@ -112,7 +112,7 @@ for (let i = 0; i < graduates.length; i++) {
   }
 }
 
-console.log(uni)
+//console.log(uni)
 
 
 // ==== ADVANCED Array Methods ====
@@ -184,3 +184,13 @@ console.log(populationTotal)
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
+
+/**
+ * Export objects
+ */
+
+module.exports = {
+  tyrannosaurus: tyrannosaurus,
+  stegosaurus: stegosaurus,
+  velociraptor: velociraptor,
+}

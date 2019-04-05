@@ -46,3 +46,12 @@ const cube = new CubeMaker({ length: 4, width: 4, height: 4 })
 
 console.log(cube.volume()) //=> 64
 console.log(cube.surfaceArea()) //=> 96
+
+/**
+ * Export classes
+ */
+
+module.exports = {
+  CuboidMaker: CuboidMaker,
+  CubeMaker: CubeMaker,
+}
