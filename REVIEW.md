@@ -2,7 +2,7 @@
 
 ## MVP
 
-- [ ] Answers
+- [✅] Answers
 - [✅] Objects and Arrays
 - [✅] Functions
 - [✅] Prototypes
@@ -14,17 +14,17 @@
 
 ## What Looks Great
 
+- Got your MVP done in record time!
 - Great work
 - Code is well formatted and easy to read
 
 ## What Could Be Improved
 
-- MVP needs to be completed
 - Need more commits. You should have one commit for every one change.
 
 ## What Could Be Added
 
-- Finish up the Answers portion
+- All good!
 
 ## Rating (1-3)
 
