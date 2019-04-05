@@ -6,6 +6,12 @@
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 */
 
+function CuboidMaker(dimensions) {
+  this.height = dimensions.height
+  this.width = dimensions.width
+  this.length = dimensions.length
+}
+
 
 /* == Step 2: Volume Method ==
   Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
