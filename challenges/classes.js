@@ -29,8 +29,10 @@ class CuboidMaker {
 }
 const cuboid = new CuboidMaker({ length: 4, width: 5, height: 5 });
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-console.log(`Volume of the cuboid is ${cuboid.volume()}`); // 100
-console.log(`Surface Area of the cuboid is ${cuboid.surfaceArea()}`); // 130
+console.log(`CLASSES CHALLENGE :: Volume of the cuboid is ${cuboid.volume()}`); // 100
+console.log(
+  `CLASSES CHALLENGE :: Surface Area of the cuboid is ${cuboid.surfaceArea()}`
+); // 130
 
 // Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.
 // Find out the formulas for volume and surface area for cubes and create those methods
@@ -59,5 +61,7 @@ class CubeMaker extends CuboidMaker {
 }
 
 const cube = new CubeMaker({ length: 4, width: 4, height: 4 });
-console.log(`Volume of the cube is ${cube.volume()}`);
-console.log(`Surface Area of the cube is ${cube.surfaceArea()}`);
+console.log(`CLASSES CHALLENGE :: Volume of the cube is ${cube.volume()}`);
+console.log(
+  `CLASSES CHALLENGE :: Surface Area of the cube is ${cube.surfaceArea()}`
+);
