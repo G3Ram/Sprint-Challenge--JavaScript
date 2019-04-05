@@ -6,29 +6,74 @@
   object name, diet, weight, length, period
 */
 
-// tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
+// constructor function 
+function DinosaurConstructor(attributes={}) {
+  const { name, diet, weight, length, period } = attributes
+  this.name = name
+  this.diet = diet
+  this.weight = weight
+  this.length = length
+  this.period = period
+}
+
+// factory function
+function DinosaurFactory(attributes={}) {
+  return {...attributes}
+}
+
+// another implemlentation of the factor (spread out args can also be applied to constructor version)
+function DinosaurFactory2(name, diet, weight, length, period) {
+  return {
+    name,
+    diet,
+    weight,
+    length,
+    period
+  }
+}
+
+const trex = new DinosaurConstructor({
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000 kg',
+  length: '12 m',
+  period: 'Late Cretaceious'
+})
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+const stegosaurus = DinosaurFactory({
+  name: 'stegosaurus',
+  diet: 'herbivorous',
+  weight: '2000 kg',
+  length: '9 m',
+  period: 'Late Jurassic'
+})
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+const velociraptor = DinosaurFactory2('velociraptor', 'carnivorous', '15 kg', '1.8m', 'Late Cretaceious')
 
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(trex.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(trex.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+DinosaurConstructor.prototype.roar = function() {
+  return "RAWERSRARARWERSARARARRRR!"
+}
+
+console.log(trex.roar());
+
 
 
 // ==== Arrays ====
