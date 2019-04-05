@@ -44,6 +44,10 @@ console.log(consume("Mary", "Poppins", greeting)) //=> Hello Mary Poppins, nice 
 
 // Explanation:
 
+// The two pass compiler for JavaScript enables `nestedfunction()` to access
+// the `internal` variable. The first pass of the compiler builds all of the
+// references within a program. The second pass executes the code and assigns
+// all of the values.
 
 const external = "I'm outside the function";
 
