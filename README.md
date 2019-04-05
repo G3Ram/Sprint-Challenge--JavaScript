@@ -38,6 +38,8 @@ Edit this document to include your answers after each question. Make sure to lea
     
 3. What is closure?
 
+    A closure is when a variable maintains a reference to another value outside of its current lexical environment.
+
 4. Describe the four rules of the 'this' keyword.
 
 5. Why do we need super() in an extended class?
