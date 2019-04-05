@@ -171,9 +171,10 @@ console.log(advancedRequest1(getZooAnimals()))
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
-
-const lowerCase = []
-console.log(lowerCase) 
+function advancedRequest2(animals) {
+  return animals.map(({animal_name: name}) => name.toLowerCase())
+}
+console.log(advancedRequest2(getZooAnimals())) 
 
 /* Request 3: .filter() 
 
