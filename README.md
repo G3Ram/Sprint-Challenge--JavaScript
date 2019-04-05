@@ -30,6 +30,8 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    `.forEach` and `.map` are both declarative ways of iterating through an iterable. Their main difference lies in how they're typically used. `.forEach` is typically used in an impure way, to produce a side effect, like logging each item to the console, or mutating some data structure. This differs from `.map` which is used to transform the value(s) inside a given functor. `.map` is a pure function because it always produces a copy of the container its operating on, and then performs the transformation (without effecting the original container or any of its values).
+
 2. What is the difference between a function and a method?
 
 3. What is closure?
