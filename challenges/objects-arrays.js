@@ -123,8 +123,14 @@ console.log(request2(getGraduates()));
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
-console.log(uni);
+function request3(graduates) {
+  const uni = [];
+  for (graduate of graduates) {
+    graduate.university.match(/uni/i) && uni.push(graduate.university)
+  }
+  return uni
+}
+console.log(request3(getGraduates()));
 
 
 // ==== ADVANCED Array Methods ====
