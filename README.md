@@ -50,6 +50,7 @@ Edit this document to include your answers after each question. Make sure to lea
     - *new* - When you instantiate an object using the `new` keyword followed by a constructor function, the `this` inside the body of the constructor function refers to the resulting object that will be instantiated upon construction.
 
 5. Why do we need super() in an extended class?
+    `super` is needed in order for the extended class to inherit the methods stored in the prototype chain, as well its immediate parent's attributes
 
 ## Project Set up
 
