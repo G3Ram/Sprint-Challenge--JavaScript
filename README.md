@@ -30,13 +30,27 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    `.forEach` and `.map` are both declarative ways of iterating through an iterable. Their main difference lies in how they're typically used. `.forEach` is typically used in an impure way, to produce a side effect, like logging each item to the console, or mutating some data structure. This differs from `.map` which is used to transform the value(s) inside a given functor. `.map` is a pure function because it always produces a copy of the container its operating on, and then performs the transformation (without effecting the original container or any of its values).
+
 2. What is the difference between a function and a method?
 
+    A function is a repeatable block of code that maps an input (or set of inputs) to an output. A method is a function that exists as a property on an object.
+    
 3. What is closure?
 
+    A closure is when a variable maintains a reference to another value outside of its current lexical environment.
+
 4. Describe the four rules of the 'this' keyword.
+    - *Default (Window/ Global)* - If the call site of a function is the window Object, (i.e. your function call is not prefixed with an `object.`, then `this` defaults to the window/global binding)
+
+    - *Implicit* - Any function's `this` keyword will refer to the call site of the object that's invoking it as a method. -- unless explicitly bound -- For example, in `obj1.ojb2.method`, the `this` in the method will point at obj2, since that's its call site. You can determine the call site of a function by looking at what immediately preceeds it.
+
+    - *Explicit* - You can explicitly set what a function's `this` will point to by using Javascript's native `call`, `apply`, or `bind` methods that are derived from `Function.prototype`.
+
+    - *new* - When you instantiate an object using the `new` keyword followed by a constructor function, the `this` inside the body of the constructor function refers to the resulting object that will be instantiated upon construction.
 
 5. Why do we need super() in an extended class?
+    `super` is needed in order for the extended class to inherit the methods stored in the prototype chain, as well its immediate parent's attributes
 
 ## Project Set up
 
