@@ -30,13 +30,51 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The biggest difference between `.forEach` and `.map` is the returned values. The
+`.map` function will return a new array while `.forEach` will return undefined.
+
+https://tc39.github.io/ecma262/#sec-array.prototype.foreach
+https://tc39.github.io/ecma262/#sec-array.prototype.map
+
 2. What is the difference between a function and a method?
+
+A method is a member function to an object. It has a specific association
+with that object and can access data inherent to that object. A regular function
+is often defined on the global scope and manipulates data that is passed through
+it's accepted arguments instead of implicit references.
 
 3. What is closure?
 
+Closures enable encapsulation. They allow a function to create and maintain
+scope of it's own execution. That is why variables declared within a function
+can be hidden from other functions (which is good for avoiding assignment conflicts).
+
 4. Describe the four rules of the 'this' keyword.
 
+a) Global binding. The `this` keyword is assigned to the Window object on the
+   global scope. I think this is implementation specific, but for 99.9% use-cases
+   this will be correct. ECMAScript standard documentation:
+
+   [[GlobalThisValue]] => Object
+   "The value returned by this in global scope.
+   Hosts may provide any ECMAScript Object value."
+
+b) Implicit binding. Look to the left of the dot to find the `this` context. That
+   is we look to the left of a dot-called function to determine what `this` is
+   assigned to.
+
+c) New binding. A constructor function will assign the `this` value to a newly
+   created object.
+
+d) Explicit binding. Using `.call`, `.apply` and `.bind` we can manually change
+   the `this` binding. I've never used this for production code, but it's good
+   to know how to do it.
+
 5. Why do we need super() in an extended class?
+
+The `super()` function is syntactic sugar for passing data from the constructor
+to the parent. This fills the internal slots of the object that were inherited
+from the parent function object.
 
 ## Project Set up
 
